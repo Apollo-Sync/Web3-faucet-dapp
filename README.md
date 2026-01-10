@@ -67,6 +67,10 @@ npm install
 cd ..
 ```
 
+```
+npm install @openzeppelin/contracts
+```
+
 **3. Create your .env file**
 ```
 PRIVATE_KEY=0xabc123...your_real_private_key_here
@@ -109,6 +113,7 @@ python3 -m http.server 8000
 http://IP:port
 ex: http://23.88.48.244:8000/
 ```
+
 
 
 
