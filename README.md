@@ -50,7 +50,7 @@ npm -v     # → 10.xx.x
 
 **2. install dependencies**
 ```
-cd arm-wrestling-web3
+cd Web3-faucet-dapp
 ```
 
 ```
@@ -109,6 +109,7 @@ python3 -m http.server 8000
 http://IP:port
 ex: http://23.88.48.244:8000/
 ```
+
 
 
 
