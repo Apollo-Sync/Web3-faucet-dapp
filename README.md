@@ -78,7 +78,7 @@ npm install @openzeppelin/contracts
 **3. Create your .env file**
 ```
 PRIVATE_KEY=0xabc123...your_real_private_key_here
-INFURA_API_KEY=your_infura_or_alchemy_key_if_you_have  # Tùy chọn, nếu dùng Infura/Alchemy
+INFURA_PROJECT_ID=your_infura_or_alchemy_key_if_you_have  # Tùy chọn, nếu dùng Infura/Alchemy
 ```
 ```
 git rm --cached .env
@@ -120,6 +120,7 @@ python3 -m http.server 8000
 http://IP:port
 ex: http://23.88.48.244:8000/
 ```
+
 
 
 
