@@ -98,22 +98,22 @@ npx hardhat clean
 npx hardhat run scripts/deploy.js --network sepolia
 ```
 
-**6. Create sever game (You need open 2 terminal with tmux)**
+**6. Create sever game (You need open terminal with tmux)**
 
 - Allow port
 ```
 sudo ufw allow 8000
 ```
 
-- Running backend
-```
-cd ~/arm-wrestling-web3/backend
-node server.js
-```
-
 - running frontend
 ```
-cd ~/arm-wrestling-web3/frontend
+cd ~/Web3-faucet-dapp/frontend
+npm install 
+npm run build
+```
+
+```
+cd build
 python3 -m http.server 8000
 ```
 **7. enter game**
@@ -121,6 +121,7 @@ python3 -m http.server 8000
 http://IP:port
 ex: http://23.88.48.244:8000/
 ```
+
 
 
 
