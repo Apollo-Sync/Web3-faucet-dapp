@@ -58,3 +58,98 @@
   margin: 20px 0;
   text-align: center;
 }
+
+/* === Thêm phần toàn trang + header/footer === */
+
+/* Body/container chính */
+body, .app-container {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background: #0a001a; /* Tím tối cyberpunk */
+  font-family: 'Orbitron', 'Segoe UI', sans-serif; /* Font neon nếu bạn có, fallback */
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+
+/* Header (đã có từ trước, fixed top) */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1rem 2rem;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(0, 255, 234, 0.2);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+}
+
+.header-left h2 {
+  margin: 0;
+  font-size: 1.6rem;
+}
+
+/* Main content - đẩy xuống để tránh header che */
+.main-content {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 100px 20px 140px; /* Khoảng trống dưới cho footer */
+}
+
+/* Footer chỉ icon, fixed bottom */
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 1.2rem 0;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(12px);
+  border-top: 1px solid rgba(0, 255, 234, 0.2);
+  z-index: 90;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem; /* Khoảng cách giữa icon - điều chỉnh nếu muốn sát hơn */
+}
+
+.social-icons a {
+  color: #00ffea;
+  font-size: 2.2rem; /* Kích thước icon lớn, neon nổi bật */
+  text-decoration: none;
+  transition: all 0.4s ease;
+  text-shadow: 0 0 10px #00ffea, 0 0 20px #00ffea;
+  display: inline-block;
+}
+
+.social-icons a:hover {
+  transform: translateY(-6px) scale(1.15);
+  text-shadow: 0 0 20px #00ffea, 0 0 40px #00ffea, 0 0 60px #00ffea;
+  color: #ffffff;
+}
+
+/* Responsive nhỏ cho mobile */
+@media (max-width: 768px) {
+  .social-icons {
+    gap: 2rem;
+  }
+  
+  .social-icons a {
+    font-size: 1.8rem;
+  }
+  
+  .card {
+    padding: 30px;
+    margin: 40px 20px;
+  }
+}
