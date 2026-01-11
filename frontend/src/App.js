@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { ethers } from 'ethers';
-import { faucetABI } from './ethereum'; // sẽ tạo file này
+import { faucetABI } from './ethereum';
+
+import './App.css';  // <-- Thêm import này
 
 const FAUCET_ADDRESS = "0x664224E312D5e3Cfd184764D895e37fbc21863f3";
 
@@ -36,16 +38,31 @@ function App() {
   }
 
   return (
-    <div style={{ textAlign: 'center', marginTop: '50px' }}>
-      <h1>Apollo Token Faucet (Sepolia)</h1>
+    <div className="card">  {/* Card glassmorphic */}
+      <h1 className="neon-text">Apollo Token Faucet (Sepolia)</h1>  {/* Title glow */}
+
       {!account ? (
-        <button onClick={connectWallet}>Connect MetaMask</button>
+        <button 
+          className="neon-button neon-text" 
+          onClick={connectWallet}
+        >
+          Connect MetaMask
+        </button>
       ) : (
-        <p>Connected: {account.slice(0,6)}...{account.slice(-4)}</p>
+        <p className="status">
+          Connected: {account.slice(0,6)}...{account.slice(-4)}
+        </p>
       )}
-      <br /><br />
-      <button onClick={requestTokens} disabled={!account}>Request 100 APT</button>
-      <p>{status}</p>
+
+      <button 
+        className="neon-button neon-text" 
+        onClick={requestTokens} 
+        disabled={!account}
+      >
+        Request 100 APT
+      </button>
+
+      {status && <p className="status">{status}</p>}
     </div>
   );
 }

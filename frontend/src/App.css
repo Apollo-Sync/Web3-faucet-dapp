@@ -1,0 +1,60 @@
+/* Neon glow effect for text */
+.neon-text {
+  color: #00ffea; /* Cyan neon */
+  text-shadow: 
+    0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 21px #fff,
+    0 0 42px #0fa,
+    0 0 82px #0fa,
+    0 0 92px #0fa,
+    0 0 102px #0fa,
+    0 0 151px #0fa;
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from { text-shadow: 0 0 10px #fff, 0 0 20px #0fa, 0 0 30px #0fa; }
+  to   { text-shadow: 0 0 20px #fff, 0 0 30px #0fa, 0 0 40px #0fa, 0 0 50px #0fa; }
+}
+
+/* Neon button */
+.neon-button {
+  background: transparent;
+  border: 2px solid #00ffea;
+  color: #00ffea;
+  padding: 14px 28px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 12px;
+  transition: all 0.4s ease;
+  box-shadow: 0 0 15px rgba(0, 255, 234, 0.5);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.neon-button:hover {
+  background: rgba(0, 255, 234, 0.12);
+  box-shadow: 0 0 25px #00ffea, 0 0 50px #00ffea;
+  transform: translateY(-3px) scale(1.05);
+}
+
+/* Card container (cho phần faucet chính) */
+.card {
+  background: rgba(10, 10, 30, 0.6);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(0, 255, 234, 0.3);
+  border-radius: 20px;
+  padding: 40px;
+  max-width: 520px;
+  margin: 60px auto;
+  box-shadow: 0 0 40px rgba(0, 255, 234, 0.25);
+}
+
+/* Status text or balance */
+.status {
+  font-size: 1.1rem;
+  margin: 20px 0;
+  text-align: center;
+}
