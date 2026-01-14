@@ -204,3 +204,53 @@ body, .app-container {
     padding: 4px 8px;
   }
 }
+/* Balance section trong card chính */
+.balance-section {
+  background: rgba(0, 255, 234, 0.08);
+  border: 1px solid rgba(0, 255, 234, 0.35);
+  border-radius: 16px;
+  padding: 16px;
+  margin: 20px 0;
+  text-align: center;
+  box-shadow: 0 0 25px rgba(0, 255, 234, 0.2);
+  backdrop-filter: blur(8px);
+}
+
+.balance-title {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #00ffea;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  text-shadow: 0 0 10px #00ffea;
+}
+
+.balance-items {
+  display: flex;
+  justify-content: center;
+  gap: 40px; /* Khoảng cách giữa ETH và APT */
+  flex-wrap: wrap;
+}
+
+.balance-item {
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding: 8px 16px;
+  border-radius: 12px;
+  background: rgba(0, 0, 0, 0.3);
+  min-width: 140px;
+}
+
+/* Responsive mobile */
+@media (max-width: 768px) {
+  .balance-items {
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .balance-section {
+    padding: 12px;
+    margin: 16px 0;
+  }
+}
